@@ -1,6 +1,6 @@
-import React from 'react';
 export const AboutSection = () => {
-  return <section id="about" className="w-full py-16 px-6 md:px-16 bg-white/70">
+  return (
+    <section id="about" className="w-full py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center">
           About BIG-C Trucking
@@ -54,5 +54,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
