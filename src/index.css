@@ -4,9 +4,7 @@
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
 
-body {
-  background-color: rgb(231 255 205 / var(--tw-bg-opacity, 1));
-}
+
 
 @keyframes scroll {
   0% {
@@ -24,4 +22,5 @@ body {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
 

@@ -1,22 +1,81 @@
+import { motion } from "framer-motion";
+
 export const AboutSection = () => {
+  // Animation variants
+  const fadeInFromLeft = {
+    hidden: { opacity: 0, x: -500 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeInFromRight = {
+    hidden: { opacity: 0, x: 500 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeInFromCenter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section
-      id="about"
-      className="w-full py-24  px-6 md:px-16 bg-gradient-to-b"
-    >
+    <section id="about" className="w-full py-24 px-6 md:px-16 bg-gradient-to-b">
       <div className="max-w-8xl mx-auto">
-        <div className="text-center mb-12">
+        {/* Header - Fade in from center */}
+        <motion.div
+          className="text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInFromCenter}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             About BIG-C Trucking
           </h2>
           <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>
-        </div>
+        </motion.div>
 
-        <div className="bg-olive bg-opacity-25 p-8 rounded-2xl">
+        <motion.div
+          className="bg-darkolive p-8 rounded-2xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInFromCenter}
+        >
           <div className="flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 space-y-6">
+            <motion.div
+              className="w-full lg:w-1/2 space-y-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInFromLeft}
+            >
               <div className="pr-8">
-                <p className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold">
+                <motion.p
+                  className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold"
+                  variants={fadeInFromLeft}
+                >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
                   integer scelerisque. Feugiat et at dui nulla urna tristique
                   sit. Netus in molestie mauris sagittis vel sem. Tempor urna
@@ -24,8 +83,11 @@ export const AboutSection = () => {
                   Adipiscing ullamcorper orci morbi ultricies. Cras blandit
                   cursus netus id purus tempus tristique sed. Eu orci ut at nisl
                   pellentesque aliquam mattis leo.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold">
+                </motion.p>
+                <motion.p
+                  className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold"
+                  variants={fadeInFromLeft}
+                >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
                   integer scelerisque. Feugiat et at dui nulla urna tristique
                   sit. Netus in molestie mauris sagittis vel sem. Tempor urna
@@ -33,8 +95,11 @@ export const AboutSection = () => {
                   Adipiscing ullamcorper orci morbi ultricies. Cras blandit
                   cursus netus id purus tempus tristique sed. Eu orci ut at nisl
                   pellentesque aliquam mattis leo.
-                </p>
-                <p className="text-gray-700 leading-relaxed text-lg mb-4 font-semibold">
+                </motion.p>
+                <motion.p
+                  className="text-gray-700 leading-relaxed text-lg mb-4 font-semibold"
+                  variants={fadeInFromLeft}
+                >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
                   integer scelerisque. Feugiat et at dui nulla urna tristique
                   sit. Netus in molestie mauris sagittis vel sem. Tempor urna
@@ -42,13 +107,23 @@ export const AboutSection = () => {
                   Adipiscing ullamcorper orci morbi ultricies. Cras blandit
                   cursus netus id purus tempus tristique sed. Eu orci ut at nisl
                   pellentesque aliquam mattis leo.
-                </p>
+                </motion.p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full lg:w-1/2">
+            <motion.div
+              className="w-full lg:w-1/2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInFromRight}
+            >
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                <motion.div
+                  className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
                       <svg
@@ -68,9 +143,14 @@ export const AboutSection = () => {
                     Over 50 specialized vehicles equipped with the latest
                     technology.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                {/* Card 2 - Years of Service */}
+                <motion.div
+                  className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
                       <svg
@@ -93,9 +173,14 @@ export const AboutSection = () => {
                     Nearly two decades of reliable service and industry
                     expertise.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                {/* Card 3 - Where to Find Us */}
+                <motion.div
+                  className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
                       <svg
@@ -118,9 +203,14 @@ export const AboutSection = () => {
                     Serving clients nationwide with our comprehensive logistics
                     network.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                {/* Card 4 - Expert Team */}
+                <motion.div
+                  className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
                       <svg
@@ -139,11 +229,11 @@ export const AboutSection = () => {
                     Professional drivers and logistics experts committed to
                     excellence.
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

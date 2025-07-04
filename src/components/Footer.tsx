@@ -62,43 +62,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#E7FFCD] transition-colors"
-                  >
-                    Refrigerated Transport
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#E7FFCD] transition-colors"
-                  >
-                    Bulk Shipping
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#E7FFCD] transition-colors"
-                  >
-                    Express Delivery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#E7FFCD] transition-colors"
-                  >
-                    Specialized Cargo
-                  </a>
-                </li>
-              </ul>
-            </div>
+
             <div className="col-span-2 md:col-span-1">
               <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
               <div className="flex space-x-4">
@@ -120,20 +84,6 @@ export const Footer = () => {
         </div>
         <div className="pt-8 border-t border-gray-700 text-center md:text-left md:flex md:justify-between md:items-center">
           <p>&copy; 2023 BIG-C Trucking Company. All rights reserved.</p>
-          <div className="mt-4 md:mt-0">
-            <a
-              href="#"
-              className="text-sm mr-4 hover:text-[#E7FFCD] transition-colors"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-sm hover:text-[#E7FFCD] transition-colors"
-            >
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

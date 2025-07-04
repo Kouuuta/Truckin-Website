@@ -1,75 +1,76 @@
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Truck } from "lucide-react";
+import { ChevronLeft, ChevronRight, SlidersVertical } from "lucide-react";
+import { motion } from "framer-motion";
 
 const vehicles = [
   {
     id: 1,
-    name: "Refrigerated Truck",
+    name: "Truck",
     description:
-      "Temperature-controlled vehicles for transporting perishable goods with precise climate control systems.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 15 tons",
     image:
       "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 2,
-    name: "Flatbed Truck",
+    name: "Truck",
     description:
-      "Open trailers ideal for oversized or irregularly shaped cargo that requires loading from the top or sides.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 20 tons",
     image:
       "https://images.unsplash.com/photo-1586191552066-d52dd1e3af86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 3,
-    name: "Box Truck",
+    name: "Truck",
     description:
-      "Enclosed cargo space with rear roll-up doors, perfect for furniture, appliances, and general freight.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 10 tons",
     image:
       "https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 4,
-    name: "Tanker Truck",
+    name: "Truck",
     description:
-      "Specialized vehicles designed for transporting liquids, chemicals, and gases safely and efficiently.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 25,000 gallons",
     image:
       "https://images.unsplash.com/photo-1577076403655-9a492e12ce70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 5,
-    name: "Tanker Truck",
+    name: "Truck",
     description:
-      "Specialized vehicles designed for transporting liquids, chemicals, and gases safely and efficiently.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 25,000 gallons",
     image:
       "https://images.unsplash.com/photo-1577076403655-9a492e12ce70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 6,
-    name: "Tanker Truck",
+    name: "Truck",
     description:
-      "Specialized vehicles designed for transporting liquids, chemicals, and gases safely and efficiently.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 25,000 gallons",
     image:
       "https://images.unsplash.com/photo-1577076403655-9a492e12ce70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 7,
-    name: "Tanker Truck",
+    name: "Truck",
     description:
-      "Specialized vehicles designed for transporting liquids, chemicals, and gases safely and efficiently.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 25,000 gallons",
     image:
       "https://images.unsplash.com/photo-1577076403655-9a492e12ce70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: 8,
-    name: "Tanker Truck",
+    name: "Truck",
     description:
-      "Specialized vehicles designed for transporting liquids, chemicals, and gases safely and efficiently.",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in molestie mauris sagittis vel sem.",
     capacity: "Up to 25,000 gallons",
     image:
       "https://images.unsplash.com/photo-1577076403655-9a492e12ce70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
@@ -92,7 +93,7 @@ export const VehiclesSection = () => {
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: -350,
+        left: -500,
         behavior: "smooth",
       });
     }
@@ -101,7 +102,7 @@ export const VehiclesSection = () => {
   const scrollRight = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: 350,
+        left: 500,
         behavior: "smooth",
       });
     }
@@ -111,27 +112,29 @@ export const VehiclesSection = () => {
     checkScrollButtons();
   }, []);
 
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 500 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeInCenter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="min-h-screen ">
-      <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-      `}</style>
       <section id="vehicles" className="w-full py-4 px-6 md:px-16">
         <div className="max-w-8xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            variants={fadeInCenter}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 ">
               Our Vehicles
             </h2>
@@ -141,11 +144,10 @@ export const VehiclesSection = () => {
               meet all your transportation needs. Each truck is regularly
               serviced and equipped with GPS tracking for real-time monitoring.
             </p>
-          </div>
+          </motion.div>
 
           {/* Carousel Container */}
           <div className="relative mb-20">
-            {/* Left Button */}
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
@@ -158,7 +160,6 @@ export const VehiclesSection = () => {
               <ChevronLeft size={24} />
             </button>
 
-            {/* Right Button */}
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
@@ -171,7 +172,6 @@ export const VehiclesSection = () => {
               <ChevronRight size={24} />
             </button>
 
-            {/* Carousel */}
             <div
               ref={carouselRef}
               onScroll={checkScrollButtons}
@@ -187,7 +187,7 @@ export const VehiclesSection = () => {
                   key={vehicle.id}
                   className="flex-shrink-0 w-80 h-96 bg-white rounded-3xl shadow-lg overflow-hidden snap-center hover:shadow-2xl transition-all duration-500 group relative animate-fade-in"
                   style={{
-                    animationDelay: `${index * 0.1}s`,
+                    animationDelay: `${index * 0.9}s`,
                   }}
                 >
                   <div className="relative h-full">
@@ -197,17 +197,13 @@ export const VehiclesSection = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
 
-                    {/* Always visible title - hides on hover */}
                     <div className="absolute bottom-6 left-6 right-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
                       <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
                         {vehicle.name}
                       </h3>
                     </div>
-
-                    {/* Hover description overlay - shows on hover */}
                     <div className="absolute bottom-6 left-6 right-6 text-white transition-all duration-500 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                       <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                         <h3 className="text-2xl font-bold mb-3 drop-shadow-lg">
@@ -222,7 +218,6 @@ export const VehiclesSection = () => {
                       </div>
                     </div>
 
-                    {/* Floating badge */}
                     <div className="absolute top-4 right-4 w-12 h-12 bg-olive rounded-full flex items-center justify-center text-white font-bold shadow-lg transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
                       {vehicle.id}
                     </div>
@@ -233,12 +228,20 @@ export const VehiclesSection = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="bg-olive bg-opacity-25 p-8 rounded-3xl ">
+          <motion.div
+            className="bg-darkolive p-8 rounded-3xl"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <div className="text-center mb-8">
               <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-lg font-semibold">
-                Lorem ipsum dolor sit amet consectetur. Blandit blandit
-                tristique fusce lectus leo ac. Purus est donec sit adipiscing
-                ac. Id fermentum pharetra at id molestie porttitor sit.
+                Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
+                integer scelerisque. Feugiat et at dui nulla urna tristique sit.
+                Netus in molestie mauris sagittis vel sem. Tempor urna eros in
+                faucibus euismod ultricies massa fames massa.
               </p>
             </div>
 
@@ -247,7 +250,7 @@ export const VehiclesSection = () => {
                 For More Inquiries
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
