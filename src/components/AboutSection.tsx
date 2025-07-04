@@ -1,56 +1,147 @@
 export const AboutSection = () => {
   return (
-    <section id="about" className="w-full py-16 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-center">
-          About BIG-C Trucking
-        </h2>
-        <div className="flex flex-col md:flex-row gap-10">
-          <div className="w-full md:w-1/2">
-            <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
-            <p className="mb-4">
-              Founded in 2005, BIG-C Trucking started with just two trucks and a
-              vision to revolutionize the logistics industry. Today, we're proud
-              to operate a fleet of over 50 specialized vehicles, serving
-              clients across the country.
-            </p>
-            <p className="mb-4">
-              Our commitment to excellence, reliability, and customer
-              satisfaction has made us one of the most trusted names in the
-              transportation industry.
-            </p>
-            <p>
-              At BIG-C, we invest in the latest technology and maintain our
-              vehicles to the highest standards to ensure efficient, safe, and
-              environmentally responsible operations.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-            <p className="mb-4">
-              To provide exceptional transportation and logistics solutions that
-              exceed our clients' expectations through reliability, efficiency,
-              and innovation.
-            </p>
-            <h3 className="text-2xl font-semibold mb-4 mt-6">Our Values</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>
-                <span className="font-medium">Safety First:</span> We prioritize
-                the safety of our team, cargo, and everyone on the road.
-              </li>
-              <li>
-                <span className="font-medium">Reliability:</span> We deliver on
-                our promises, every time.
-              </li>
-              <li>
-                <span className="font-medium">Excellence:</span> We strive for
-                excellence in every aspect of our operations.
-              </li>
-              <li>
-                <span className="font-medium">Sustainability:</span> We're
-                committed to reducing our environmental impact.
-              </li>
-            </ul>
+    <section
+      id="about"
+      className="w-full py-24  px-6 md:px-16 bg-gradient-to-b"
+    >
+      <div className="max-w-8xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            About BIG-C Trucking
+          </h2>
+          <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div className="bg-olive bg-opacity-25 p-8 rounded-2xl">
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="w-full lg:w-1/2 space-y-6">
+              <div className="pr-8">
+                <p className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold">
+                  Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
+                  integer scelerisque. Feugiat et at dui nulla urna tristique
+                  sit. Netus in molestie mauris sagittis vel sem. Tempor urna
+                  eros in faucibus euismod ultricies massa fames massa.
+                  Adipiscing ullamcorper orci morbi ultricies. Cras blandit
+                  cursus netus id purus tempus tristique sed. Eu orci ut at nisl
+                  pellentesque aliquam mattis leo.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold">
+                  Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
+                  integer scelerisque. Feugiat et at dui nulla urna tristique
+                  sit. Netus in molestie mauris sagittis vel sem. Tempor urna
+                  eros in faucibus euismod ultricies massa fames massa.
+                  Adipiscing ullamcorper orci morbi ultricies. Cras blandit
+                  cursus netus id purus tempus tristique sed. Eu orci ut at nisl
+                  pellentesque aliquam mattis leo.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-lg mb-4 font-semibold">
+                  Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
+                  integer scelerisque. Feugiat et at dui nulla urna tristique
+                  sit. Netus in molestie mauris sagittis vel sem. Tempor urna
+                  eros in faucibus euismod ultricies massa fames massa.
+                  Adipiscing ullamcorper orci morbi ultricies. Cras blandit
+                  cursus netus id purus tempus tristique sed. Eu orci ut at nisl
+                  pellentesque aliquam mattis leo.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-center">
+                    Modern Fleet
+                  </h4>
+                  <p className="text-white opacity-90 text-lg text-center font-light">
+                    Over 50 specialized vehicles equipped with the latest
+                    technology.
+                  </p>
+                </div>
+
+                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-center">
+                    Years of Service
+                  </h4>
+                  <p className="text-white opacity-90 text-lg text-center font-light">
+                    Nearly two decades of reliable service and industry
+                    expertise.
+                  </p>
+                </div>
+
+                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-center">
+                    Where to Find Us
+                  </h4>
+                  <p className="text-white opacity-90 text-lg text-center font-light">
+                    Serving clients nationwide with our comprehensive logistics
+                    network.
+                  </p>
+                </div>
+
+                <div className="bg-black bg-opacity-25 p-6 rounded-2xl text-white">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-center">
+                    Expert Team
+                  </h4>
+                  <p className="text-white opacity-90 text-lg text-center font-light">
+                    Professional drivers and logistics experts committed to
+                    excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

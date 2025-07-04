@@ -5,12 +5,10 @@ import { VehiclesSection } from "./components/VehiclesSection";
 import { OrganizationSection } from "./components/OrganizationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
-import ParticleBackground from "./components/ParticleBackground";
 
 export function App() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#E7FFCD]">
-      <ParticleBackground />
+    <div className="relative min-h-screen overflow-hidden">
       <Navbar />
       <Hero />
       <AboutSection />

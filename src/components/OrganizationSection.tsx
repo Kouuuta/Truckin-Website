@@ -31,10 +31,7 @@ const executives = [
 ];
 export const OrganizationSection = () => {
   return (
-    <section
-      id="organization"
-      className="w-full py-16 px-6 md:px-16 bg-white/70"
-    >
+    <section id="organization" className="w-full py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-center">
           Our Leadership Team
@@ -59,33 +56,6 @@ export const OrganizationSection = () => {
               <p className="text-gray-600 text-center">{executive.position}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-16 flex justify-center">
-          <div className="bg-white/90 rounded-lg p-6 max-w-3xl">
-            <h3 className="text-2xl font-semibold mb-4 text-center">
-              Organizational Structure
-            </h3>
-            <div className="flex flex-col items-center">
-              <div className="w-full max-w-xs bg-[#E7FFCD] rounded-lg p-4 mb-4 text-center">
-                <p className="font-semibold">CEO</p>
-              </div>
-              <div className="w-8 h-8 border-l-2 border-gray-400"></div>
-              <div className="w-full flex justify-center mb-4">
-                <div className="w-8 h-8 border-t-2 border-gray-400 flex-grow"></div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-                <div className="bg-[#E7FFCD] rounded-lg p-4 text-center">
-                  <p className="font-semibold">COO</p>
-                </div>
-                <div className="bg-[#E7FFCD] rounded-lg p-4 text-center">
-                  <p className="font-semibold">Fleet Manager</p>
-                </div>
-                <div className="bg-[#E7FFCD] rounded-lg p-4 text-center">
-                  <p className="font-semibold">Customer Relations</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

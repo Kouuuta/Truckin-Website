@@ -90,7 +90,7 @@ export const Hero = () => {
     <section
       ref={heroRef}
       id="home"
-      className="w-full py-36 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between min-h-[80vh] relative overflow-hidden"
+      className="w-full py-36 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between min-h-[80vh] relative overflow-hidden bg-[url('/background-gradient.jpg')] bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-lime-100/20 to-transparent pointer-events-none"></div>
 
