@@ -36,7 +36,7 @@ export const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setMenu(false); // Close mobile menu after clicking
+    setMenu(false);
   };
 
   const navItems = [
@@ -107,7 +107,7 @@ export const Navbar = () => {
           <motion.div className="flex items-center space-x-3 z-10" layout>
             {/* Contact CTA Button */}
             <motion.button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("contact")}
               className="hidden md:inline-flex items-center px-4 py-2 bg-olive text-black rounded-full font-extrabold hover:bg-olive opacity/80"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

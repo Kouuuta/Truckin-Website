@@ -50,7 +50,7 @@ export const AboutSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInFromCenter}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
             About BIG-C Trucking
           </h2>
           <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>

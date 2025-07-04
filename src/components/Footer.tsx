@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 export const Footer = () => {
   return (
-    <footer className="w-full bg-[#333333] text-white py-10 px-6 md:px-16">
+    <footer className="w-full bg-[#333333] text-white py-12 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0">
@@ -26,14 +26,6 @@ export const Footer = () => {
                     className="hover:text-[#E7FFCD] transition-colors"
                   >
                     Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    className="hover:text-[#E7FFCD] transition-colors"
-                  >
-                    Services
                   </a>
                 </li>
                 <li>

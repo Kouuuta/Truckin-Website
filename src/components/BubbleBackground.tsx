@@ -13,7 +13,7 @@ export const BubbleBackground = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to bottom, #E7FFCD, #C1D6AA)",
+          background: "linear-gradient(to bottom, #E7FFCD, #9BAE87)",
         }}
       />
       {bubbles.map((bubble) => (

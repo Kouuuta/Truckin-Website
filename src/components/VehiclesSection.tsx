@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight, SlidersVertical } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const vehicles = [
@@ -81,12 +81,18 @@ export const VehiclesSection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const checkScrollButtons = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
       setCanScrollLeft(scrollLeft > 0);
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+
+      const cardWidth = 200;
+      const gap = 32;
+      const currentIndex = Math.round(scrollLeft / (cardWidth + gap));
+      setActiveIndex(Math.min(currentIndex, vehicles.length - 1));
     }
   };
 
@@ -103,6 +109,17 @@ export const VehiclesSection = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: 500,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (carouselRef.current) {
+      const cardWidth = 200;
+      const gap = 32;
+      carouselRef.current.scrollTo({
+        left: index * (cardWidth + gap),
         behavior: "smooth",
       });
     }
@@ -126,7 +143,6 @@ export const VehiclesSection = () => {
     <div className="min-h-screen ">
       <section id="vehicles" className="w-full py-4 px-6 md:px-16">
         <div className="max-w-8xl mx-auto">
-          {/* Header */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInCenter}
@@ -135,7 +151,7 @@ export const VehiclesSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 ">
+            <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4 ">
               Our Vehicles
             </h2>
             <div className="w-36 h-1 bg-green-500 mx-auto rounded-full "></div>
@@ -147,7 +163,7 @@ export const VehiclesSection = () => {
           </motion.div>
 
           {/* Carousel Container */}
-          <div className="relative mb-20">
+          <div className="relative mb-8">
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
@@ -185,7 +201,7 @@ export const VehiclesSection = () => {
               {vehicles.map((vehicle, index) => (
                 <div
                   key={vehicle.id}
-                  className="flex-shrink-0 w-80 h-96 bg-white rounded-3xl shadow-lg overflow-hidden snap-center hover:shadow-2xl transition-all duration-500 group relative animate-fade-in"
+                  className="vehicle-card flex-shrink-0 w-80 h-96 bg-white rounded-3xl shadow-lg overflow-hidden snap-center hover:shadow-2xl transition-all duration-500 group relative animate-fade-in"
                   style={{
                     animationDelay: `${index * 0.9}s`,
                   }}
@@ -225,11 +241,24 @@ export const VehiclesSection = () => {
                 </div>
               ))}
             </div>
+            <div className="flex justify-center gap-2 mt-6">
+              {vehicles.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    activeIndex === index
+                      ? "bg-green-600 w-6"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  onClick={() => scrollToIndex(index)}
+                  aria-label={`Go to slide ${index}`}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* Bottom Section */}
           <motion.div
-            className="bg-darkolive p-8 rounded-3xl"
+            className="bg-darkolive p-8 rounded-3xl mt-12"
             variants={fadeInRight}
             initial="hidden"
             whileInView="visible"
