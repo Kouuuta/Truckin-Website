@@ -99,7 +99,7 @@ export const VehiclesSection = () => {
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: -500,
+        left: -50,
         behavior: "smooth",
       });
     }
@@ -108,7 +108,7 @@ export const VehiclesSection = () => {
   const scrollRight = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: 500,
+        left: 50,
         behavior: "smooth",
       });
     }
@@ -130,7 +130,7 @@ export const VehiclesSection = () => {
   }, []);
 
   const fadeInRight = {
-    hidden: { opacity: 0, x: 500 },
+    hidden: { opacity: 0, x: 50 },
     visible: { opacity: 1, x: 0 },
   };
 

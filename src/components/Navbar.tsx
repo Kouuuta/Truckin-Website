@@ -204,9 +204,9 @@ export const Navbar = () => {
                 >
                   <button
                     onClick={() => scrollToSection("about")}
-                    className="inline-flex items-center px-6 py-3 bg-[#61A11D] text-white rounded-full font-bold hover:bg-[#4d8017] transition-colors"
+                    className="inline-flex items-center px-6 py-3 bg-olive text-white rounded-full font-bold hover:bg-olive transition-colors"
                   >
-                    Get Quote
+                    Contact Us
                     <svg
                       className="w-4 h-4 ml-2"
                       fill="none"

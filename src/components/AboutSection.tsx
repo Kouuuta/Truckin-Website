@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const AboutSection = () => {
   const fadeInFromLeft = {
-    hidden: { opacity: 0, x: -500 },
+    hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
       x: 0,
@@ -11,7 +11,7 @@ export const AboutSection = () => {
   };
 
   const fadeInFromRight = {
-    hidden: { opacity: 0, x: 500 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       x: 0,
