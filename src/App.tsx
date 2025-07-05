@@ -8,6 +8,7 @@ import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { BubbleBackground } from "./components/BubbleBackground";
 import LoadingScreen from "./components/LoadingScreen";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +22,7 @@ export function App() {
       const timer = setTimeout(() => {
         setIsLoading(false);
         sessionStorage.setItem("hasVisited", "true");
-      }, 2000);
+      }, 2500);
 
       return () => clearTimeout(timer);
     } else {
@@ -43,6 +44,7 @@ export function App() {
       <OrganizationSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

@@ -135,7 +135,7 @@ export const Hero = () => {
           <a
             ref={buttonRef}
             href="#contact"
-            className="inline-flex items-center bg-olive px-6 py-3 rounded-full text-black font-extrabold transition-all hover:bg-opacity-80 shadow-lg hover:shadow-xl cursor-pointer"
+            className="inline-flex items-center bg-olive px-6 py-3 rounded-full text-white font-semibold transition-all hover:bg-opacity-80 shadow-lg hover:shadow-xl cursor-pointer"
           >
             Contact Us <ArrowRightIcon className="ml-2 h-5 w-5" />
           </a>

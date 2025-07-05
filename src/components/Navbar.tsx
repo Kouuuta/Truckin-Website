@@ -108,7 +108,7 @@ export const Navbar = () => {
             {/* Contact CTA Button */}
             <motion.button
               onClick={() => scrollToSection("contact")}
-              className="hidden md:inline-flex items-center px-4 py-2 bg-olive text-black rounded-full font-extrabold hover:bg-olive opacity/80"
+              className="hidden md:inline-flex items-center px-4 py-2 bg-olive text-white rounded-full font-extrabold hover:bg-olive opacity/80"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

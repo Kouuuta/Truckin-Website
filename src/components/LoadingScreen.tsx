@@ -24,16 +24,11 @@ const LoadingScreen = () => {
           <img
             src="/bigc_logo.png"
             alt="BIG-C Logo"
-            className="h-36 md:h-40 object-contain"
+            className="h-36 md:h-96 object-contain"
           />
         </div>
-
-        <p className="text-gray-700 text-lg font-medium">
-          Premium Trucking & Delivery Services
-        </p>
       </div>
-
-      <div className="w-40 h-2 bg-white/30 rounded-full overflow-hidden mb-4">
+      <div className="w-40 h-2 bg-white/30 rounded-full overflow-hidden mb-2">
         <div
           className="h-full bg-gray-800 rounded-full transition-all duration-300 ease-out"
           style={{
