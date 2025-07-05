@@ -109,7 +109,7 @@ export const Hero = () => {
           ref={badgeRef}
           className="inline-block px-4 py-1 bg-olive/60 rounded-full mb-4 shadow-lg"
         >
-          <p className="text-sm font-extrabold uppercase tracking-wider">
+          <p className="text-sm font-extrabold uppercase tracking-wider text-white">
             A TRUCKING COMPANY
           </p>
         </div>

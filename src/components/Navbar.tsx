@@ -203,7 +203,7 @@ export const Navbar = () => {
                   className="pt-4"
                 >
                   <button
-                    onClick={() => scrollToSection("about")}
+                    onClick={() => scrollToSection("contact")}
                     className="inline-flex items-center px-6 py-3 bg-olive text-white rounded-full font-bold hover:bg-olive transition-colors"
                   >
                     Contact Us
