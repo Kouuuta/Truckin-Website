@@ -75,7 +75,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="pt-8 border-t border-gray-700 text-center md:text-left md:flex md:justify-between md:items-center">
-          <p>&copy; 2023 BIG-C Trucking Company. All rights reserved.</p>
+          <p>&copy; 2025 BIG-C Trucking Company. All rights reserved.</p>
         </div>
       </div>
     </footer>

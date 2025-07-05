@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 export const AboutSection = () => {
-  // Animation variants
   const fadeInFromLeft = {
     hidden: { opacity: 0, x: -500 },
     visible: {
@@ -42,7 +41,6 @@ export const AboutSection = () => {
   return (
     <section id="about" className="w-full py-24 px-6 md:px-16 bg-gradient-to-b">
       <div className="max-w-8xl mx-auto">
-        {/* Header - Fade in from center */}
         <motion.div
           className="text-center mb-12"
           initial="hidden"
@@ -145,7 +143,6 @@ export const AboutSection = () => {
                   </p>
                 </motion.div>
 
-                {/* Card 2 - Years of Service */}
                 <motion.div
                   className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
                   variants={cardVariants}
@@ -175,7 +172,6 @@ export const AboutSection = () => {
                   </p>
                 </motion.div>
 
-                {/* Card 3 - Where to Find Us */}
                 <motion.div
                   className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
                   variants={cardVariants}
@@ -204,8 +200,6 @@ export const AboutSection = () => {
                     network.
                   </p>
                 </motion.div>
-
-                {/* Card 4 - Expert Team */}
                 <motion.div
                   className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
                   variants={cardVariants}

@@ -156,9 +156,10 @@ export const VehiclesSection = () => {
             </h2>
             <div className="w-36 h-1 bg-green-500 mx-auto rounded-full "></div>
             <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-lg pt-12 font-semibold">
-              We maintain a diverse fleet of modern, well-maintained vehicles to
-              meet all your transportation needs. Each truck is regularly
-              serviced and equipped with GPS tracking for real-time monitoring.
+              Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
+              integer scelerisque. Feugiat et at dui nulla urna tristique sit.
+              Netus in molestie mauris sagittis vel sem. Tempor urna eros in
+              faucibus euismod ultricies massa fames massa.
             </p>
           </motion.div>
 
