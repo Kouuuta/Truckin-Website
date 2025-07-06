@@ -155,7 +155,7 @@ export const VehiclesSection = () => {
               Our Vehicles
             </h2>
             <div className="w-36 h-1 bg-green-500 mx-auto rounded-full "></div>
-            <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-lg pt-12 font-semibold">
+            <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg pt-12 font-semibold">
               Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
               integer scelerisque. Feugiat et at dui nulla urna tristique sit.
               Netus in molestie mauris sagittis vel sem. Tempor urna eros in
@@ -267,7 +267,7 @@ export const VehiclesSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="text-center mb-8">
-              <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-lg font-semibold">
+              <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-base sm:text-lg font-semibold">
                 Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
                 integer scelerisque. Feugiat et at dui nulla urna tristique sit.
                 Netus in molestie mauris sagittis vel sem. Tempor urna eros in

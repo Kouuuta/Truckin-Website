@@ -31,12 +31,31 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
+  // Enhanced scrollToSection with better mobile support
   const scrollToSection = (sectionId: string) => {
+    console.log(`Attempting to scroll to: ${sectionId}`); // Debug log
+
     const element = document.getElementById(sectionId);
+    console.log(`Element found:`, element); // Debug log
+
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Close mobile menu first
+      setMenu(false);
+
+      // Add a small delay to ensure menu closes before scrolling
+      setTimeout(() => {
+        const headerOffset = 100; // Adjust this based on your navbar height
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 100);
+    } else {
+      console.warn(`Element with ID '${sectionId}' not found`);
     }
-    setMenu(false);
   };
 
   const navItems = [
@@ -108,7 +127,7 @@ export const Navbar = () => {
             {/* Contact CTA Button */}
             <motion.button
               onClick={() => scrollToSection("contact")}
-              className="hidden md:inline-flex items-center px-4 py-2 bg-olive text-white rounded-full font-extrabold hover:bg-olive opacity/80"
+              className="hidden md:inline-flex items-center px-4 py-2 bg-olive text-white rounded-full font-extrabold hover:bg-olive hover:opacity-80 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -130,10 +149,14 @@ export const Navbar = () => {
 
             {/* Mobile menu button */}
             <motion.button
-              onClick={() => setMenu(!menu)}
-              className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
+              onClick={() => {
+                console.log("Mobile menu clicked, current state:", menu);
+                setMenu(!menu);
+              }}
+              className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors touch-manipulation"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Toggle mobile menu"
             >
               <div className="w-6 h-5 flex flex-col justify-between">
                 <motion.span
@@ -167,10 +190,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {menu && (
           <motion.div
-            className="lg:hidden absolute top-full left-0 w-full mt-2 px-4"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden fixed top-20 left-0 w-full px-4 z-[60]"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div
@@ -189,8 +212,18 @@ export const Navbar = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <button
-                      onClick={() => item.id && scrollToSection(item.id)}
-                      className="block w-full text-left text-xl font-bold py-2 text-black hover:text-[#61A11D] transition-colors border-b-2 border-transparent hover:border-[#61A11D]"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log(
+                          `Mobile nav item clicked: ${item.title} -> ${item.id}`
+                        );
+                        if (item.id) {
+                          scrollToSection(item.id);
+                        }
+                      }}
+                      className="block w-full text-left text-xl font-bold py-3 px-2 text-black hover:text-[#61A11D] transition-colors border-b-2 border-transparent hover:border-[#61A11D] focus:outline-none focus:text-[#61A11D] touch-manipulation"
+                      style={{ touchAction: "manipulation" }}
                     >
                       {item.title}
                     </button>
@@ -203,8 +236,14 @@ export const Navbar = () => {
                   className="pt-4"
                 >
                   <button
-                    onClick={() => scrollToSection("contact")}
-                    className="inline-flex items-center px-6 py-3 bg-olive text-white rounded-full font-bold hover:bg-olive transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      console.log("Mobile Contact Us clicked");
+                      scrollToSection("contact");
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-olive text-white rounded-full font-bold hover:bg-olive transition-colors touch-manipulation"
+                    style={{ touchAction: "manipulation" }}
                   >
                     Contact Us
                     <svg

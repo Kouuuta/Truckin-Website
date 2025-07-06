@@ -116,14 +116,14 @@ export const Hero = () => {
 
         <h1
           ref={titleRef}
-          className="py-4 text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent"
+          className="py-4 text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent"
         >
           Welcome to BIG-C, Happy Trucking!
         </h1>
 
         <p
           ref={paragraphRef}
-          className="text-lg mb-8 font-semibold text-gray-700 leading-relaxed"
+          className="text-base sm:text-lg mb-8 font-semibold text-gray-700 leading-relaxed text-justify"
         >
           Lorem ipsum dolor sit amet consectetur. Turpis at sem nullam morbi eu
           praesent elementum purus. Amet sapien tempus integer aliquet cras

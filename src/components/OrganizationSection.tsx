@@ -36,7 +36,7 @@ export const OrganizationSection = () => {
           Our Leadership Team
         </h2>
         <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>
-        <p className="text-center mb-10 max-w-3xl mx-auto pt-16 font-semibold text-gray-700 text-lg">
+        <p className="text-center mb-10 max-w-3xl mx-auto pt-16 font-semibold text-gray-700 text-base sm:text-lg">
           Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla integer
           scelerisque. Feugiat et at dui nulla urna tristique sit. Netus in
           molestie mauris sagittis vel sem. Tempor urna eros in faucibus euismod
@@ -60,7 +60,7 @@ export const OrganizationSection = () => {
           ))}
         </div>
         <div className="max-w-6xl mx-auto pt-36 pb-14s">
-          <p className="text-center mb-10 max-w-3xl mx-auto font-semibold text-gray-700 text-lg">
+          <p className="text-center mb-10 max-w-3xl mx-auto font-semibold text-gray-700 text-base sm:text-lg">
             Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
             integer scelerisque. Feugiat et at dui nulla urna tristique sit.
             Netus in molestie mauris sagittis vel sem. Tempor urna eros in

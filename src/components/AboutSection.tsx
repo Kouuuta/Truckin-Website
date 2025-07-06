@@ -71,7 +71,7 @@ export const AboutSection = () => {
             >
               <div className="pr-8">
                 <motion.p
-                  className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold"
+                  className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -83,7 +83,7 @@ export const AboutSection = () => {
                   pellentesque aliquam mattis leo.
                 </motion.p>
                 <motion.p
-                  className="text-gray-700 leading-relaxed mb-4 text-lg font-semibold"
+                  className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -95,7 +95,7 @@ export const AboutSection = () => {
                   pellentesque aliquam mattis leo.
                 </motion.p>
                 <motion.p
-                  className="text-gray-700 leading-relaxed text-lg mb-4 font-semibold"
+                  className="text-gray-700 leading-relaxed text-base sm:text-lg mb-4 font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -116,7 +116,7 @@ export const AboutSection = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInFromRight}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <motion.div
                   className="bg-black bg-opacity-25 p-6 rounded-2xl text-white"
                   variants={cardVariants}

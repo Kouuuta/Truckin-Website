@@ -28,7 +28,7 @@ export const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="relative w-28 h-28 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 group"
+          className="relative w-28 h-28 rounded-full transition-all duration-300 hover:scale-110 group"
         >
           <div className="absolute inset-2 flex items-center justify-center">
             <img
