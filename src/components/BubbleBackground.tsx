@@ -1,7 +1,7 @@
 export const BubbleBackground = () => {
   const bubbles = Array.from({ length: 5 }, (_, i) => ({
     id: i,
-    size: Math.random() * 80 + 20,
+    size: Math.random() * 50 + 20,
     left: Math.random() * 100,
     delay: Math.random() * 20,
     duration: Math.random() * 10 + 15,
