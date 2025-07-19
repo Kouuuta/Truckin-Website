@@ -71,7 +71,7 @@ export const AboutSection = () => {
             >
               <div className="pr-8">
                 <motion.p
-                  className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg font-semibold text-justify"
+                  className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -83,7 +83,7 @@ export const AboutSection = () => {
                   pellentesque aliquam mattis leo.
                 </motion.p>
                 <motion.p
-                  className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg font-semibold text-justify"
+                  className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -95,7 +95,7 @@ export const AboutSection = () => {
                   pellentesque aliquam mattis leo.
                 </motion.p>
                 <motion.p
-                  className="text-gray-700 leading-relaxed text-base sm:text-lg mb-4 font-semibold text-justify"
+                  className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
                 >
                   Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla

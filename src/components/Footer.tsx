@@ -1,9 +1,4 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TwitterIcon,
-  LinkedinIcon,
-} from "lucide-react";
+import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react";
 export const Footer = () => {
   return (
     <footer className="w-full bg-[#333333] text-white py-12 px-6 md:px-16">
@@ -55,7 +50,7 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="col-span-2 md:col-span-1">
+            <div className="col-span-2 md:col-span-1 ">
               <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-[#E7FFCD] transition-colors">
@@ -66,9 +61,6 @@ export const Footer = () => {
                 </a>
                 <a href="#" className="hover:text-[#E7FFCD] transition-colors">
                   <TwitterIcon className="w-6 h-6" />
-                </a>
-                <a href="#" className="hover:text-[#E7FFCD] transition-colors">
-                  <LinkedinIcon className="w-6 h-6" />
                 </a>
               </div>
             </div>

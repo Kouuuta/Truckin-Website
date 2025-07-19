@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { AboutSection } from "./components/AboutSection";
-import { VehiclesSection } from "./components/VehiclesSection";
 import { OrganizationSection } from "./components/OrganizationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { BubbleBackground } from "./components/BubbleBackground";
 import LoadingScreen from "./components/LoadingScreen";
+
 import { ScrollToTop } from "./components/ScrollToTop";
+import ClientsSection from "./components/ClientsSection";
 
 export function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -40,7 +41,7 @@ export function App() {
       <Navbar />
       <Hero />
       <AboutSection />
-      <VehiclesSection />
+      <ClientsSection />
       <OrganizationSection />
       <ContactSection />
       <Footer />

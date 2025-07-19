@@ -4,7 +4,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="w-full py-16 px-6 md:px-16 ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
+        <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-2 text-center">
           Contact Us
         </h2>
         <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>

@@ -60,7 +60,7 @@ export const Navbar = () => {
 
   const navItems = [
     { title: "Home", id: "home" },
-    { title: "Vehicles", id: "vehicles" },
+    { title: "Clients", id: "clients" },
     { title: "Organization", id: "organization" },
     { title: "About Us", id: "about" },
   ];
