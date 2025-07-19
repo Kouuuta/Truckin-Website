@@ -180,8 +180,6 @@ export default function ClientsSection() {
                       ></div>
                     </div>
                   ))}
-
-                  {/* Vehicle identifier */}
                   <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full">
                     <span className="text-white text-sm font-bold">
                       {activeVehicle.target.toUpperCase()}
@@ -299,7 +297,7 @@ export default function ClientsSection() {
                 </div>
 
                 {/* Fleet Text */}
-                <div className="absolute top-4 left-4 text-white/20 text-2xl sm:text-4xl font-black transform -rotate-12">
+                <div className="absolute top-4 left-4 text-white/20 text-2xl sm:text-4xl font-black transform -rotate-12 animate-pulse">
                   CLIENTS
                 </div>
               </div>
