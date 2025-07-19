@@ -69,7 +69,7 @@ export const AboutSection = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInFromLeft}
             >
-              <div className="pr-8">
+              <div className="pr-1">
                 <motion.p
                   className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-lg font-semibold text-justify"
                   variants={fadeInFromLeft}
@@ -137,7 +137,7 @@ export const AboutSection = () => {
                   <h4 className="text-lg font-bold mb-3 text-center">
                     Modern Fleet
                   </h4>
-                  <p className="text-white opacity-90 text-lg text-center font-light">
+                  <p className="text-white opacity-90 text-sl text-center font-light">
                     Over 50 specialized vehicles equipped with the latest
                     technology.
                   </p>
@@ -166,7 +166,7 @@ export const AboutSection = () => {
                   <h4 className="text-lg font-bold mb-3 text-center">
                     Years of Service
                   </h4>
-                  <p className="text-white opacity-90 text-lg text-center font-light">
+                  <p className="text-white opacity-90 text-sl text-center font-light">
                     Nearly two decades of reliable service and industry
                     expertise.
                   </p>
@@ -195,7 +195,7 @@ export const AboutSection = () => {
                   <h4 className="text-lg font-bold mb-3 text-center">
                     Where to Find Us
                   </h4>
-                  <p className="text-white opacity-90 text-lg text-center font-light">
+                  <p className="text-white opacity-90 text-sl text-center font-light">
                     Serving clients nationwide with our comprehensive logistics
                     network.
                   </p>
@@ -219,7 +219,7 @@ export const AboutSection = () => {
                   <h4 className="text-lg font-bold mb-3 text-center">
                     Expert Team
                   </h4>
-                  <p className="text-white opacity-90 text-lg text-center font-light">
+                  <p className="text-white opacity-90 text-sl text-center font-light">
                     Professional drivers and logistics experts committed to
                     excellence.
                   </p>

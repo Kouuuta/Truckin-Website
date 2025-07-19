@@ -300,7 +300,7 @@ export default function ClientsSection() {
 
                 {/* Fleet Text */}
                 <div className="absolute top-4 left-4 text-white/20 text-2xl sm:text-4xl font-black transform -rotate-12">
-                  FLEET
+                  CLIENTS
                 </div>
               </div>
 
