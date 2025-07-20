@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const vehicles = [
   {
@@ -61,6 +62,33 @@ export default function ClientsSection() {
   const [contentKey, setContentKey] = useState(0);
   const [isHeartActive, setIsHeartActive] = useState(false);
   const intervalRef = useRef(null);
+
+  const fadeInFromLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeInFromCenter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeFromCenter = {
+    hidden: { opacity: 0, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   // Auto-play functionality
   useEffect(() => {
@@ -125,15 +153,21 @@ export default function ClientsSection() {
   const activeVehicle = vehicles[activeIndex];
 
   return (
-    <div className="min-h-screen  p-4 sm:p-6 lg:p-8">
+    <div id="clients" className="min-h-screen  p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8 lg:mb-16">
+        <motion.div
+          className="text-center mb-8 lg:mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInFromCenter}
+        >
           <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4 tracking-wider">
             Our Clients
           </h2>
           <div className="w-36 h-1 bg-green-500 mx-auto rounded-full"></div>
-        </div>
+        </motion.div>
 
         {/* Main Carousel Container */}
         <div
@@ -154,7 +188,13 @@ export default function ClientsSection() {
                 </div>
 
                 {/* Vehicle Images with Fade Effect */}
-                <div className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl">
+                <motion.div
+                  className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={fadeInFromLeft}
+                >
                   {vehicles.map((vehicle, index) => (
                     <div
                       key={`${vehicle.id}-${index}`}
@@ -185,7 +225,7 @@ export default function ClientsSection() {
                       {activeVehicle.target.toUpperCase()}
                     </span>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Decorative Elements */}
                 <div className="absolute top-46 right-64 text-white/20 text-9xl font-black transform -rotate-90 animate-pulse">
@@ -287,14 +327,20 @@ export default function ClientsSection() {
                 </div>
 
                 {/* Vehicle Image */}
-                <div className="relative z-10 w-64 h-48 sm:w-80 sm:h-60 rounded-xl overflow-hidden shadow-2xl">
+                <motion.div
+                  className="relative z-10 w-64 h-48 sm:w-80 sm:h-60 rounded-xl overflow-hidden shadow-2xl"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={fadeFromCenter}
+                >
                   <img
                     key={activeIndex}
                     src={activeVehicle.image}
                     alt={activeVehicle.name}
                     className="w-full h-full object-cover transition-all duration-700"
                   />
-                </div>
+                </motion.div>
 
                 {/* Fleet Text */}
                 <div className="absolute top-4 left-4 text-white/20 text-2xl sm:text-4xl font-black transform -rotate-12 animate-pulse">
@@ -303,7 +349,13 @@ export default function ClientsSection() {
               </div>
 
               {/* Mobile Content Section */}
-              <div className="p-6 sm:p-8 text-white">
+              <motion.div
+                className="p-6 sm:p-8 text-white"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeFromCenter}
+              >
                 <h2 className="text-2xl sm:text-3xl font-black mb-4 tracking-wider">
                   {activeVehicle.name.toUpperCase()}
                 </h2>
@@ -329,7 +381,7 @@ export default function ClientsSection() {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {activeVehicle.description}
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -396,7 +448,13 @@ export default function ClientsSection() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="bg-darkolive p-8 rounded-3xl mt-12">
+        <motion.div
+          className="bg-darkolive p-8 rounded-3xl mt-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInFromCenter}
+        >
           <div className="text-center mb-6">
             <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-base sm:text-lg font-semibold">
               Lorem ipsum dolor sit amet consectetur. Adipiscing risus nulla
@@ -411,7 +469,7 @@ export default function ClientsSection() {
               For More Inquiries
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <style jsx>{`
