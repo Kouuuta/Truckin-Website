@@ -5,10 +5,9 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0">
-            <img src="/bigc_logo.png" alt="BIG-C Logo" className="h-12 mb-4" />
+            <img src="/bigc_logo.png" alt="BIG-C Logo" className="h-28" />
             <p className="max-w-xs">
-              Delivering excellence in transportation and logistics solutions
-              since 2005.
+              Delivering excellence in transportation and logistics solutions.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -25,10 +24,10 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#vehicles"
+                    href="#clients"
                     className="hover:text-[#E7FFCD] transition-colors"
                   >
-                    Vehicles
+                    Clients
                   </a>
                 </li>
                 <li>
