@@ -141,15 +141,15 @@ export const OrganizationSection = () => {
 };
 
 const ExecutiveCard = ({ executive }) => (
-  <div className="flex flex-col items-center text-center">
-    <div className="w-48 h-48 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 border-4 border-[#E7FFCD]">
+  <div className="bg-white/30 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col items-center w-56 hover:shadow-xl transition-all duration-300 ease-in-out">
+    <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-green-200 shadow-md mb-4">
       <img
         src={executive.image}
         alt={executive.name}
         className="w-full h-full object-cover"
       />
     </div>
-    <h3 className="text-lg font-semibold">{executive.name}</h3>
-    <p className="text-gray-700 text-sm">{executive.position}</p>
+    <h3 className="text-lg font-semibold text-gray-900">{executive.name}</h3>
+    <p className="text-gray-600 text-sm">{executive.position}</p>
   </div>
 );

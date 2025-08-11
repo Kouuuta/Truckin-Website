@@ -20,7 +20,7 @@ const LoadingScreen = () => {
       }}
     >
       <div className="flex flex-col items-center mb-8">
-        <div className="mb-4">
+        <div className="relative inline-block shine-logo">
           <img
             src="/bigc_logo.png"
             alt="BIG-C Logo"
