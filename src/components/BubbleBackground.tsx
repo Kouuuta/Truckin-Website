@@ -1,10 +1,10 @@
 export const BubbleBackground = () => {
-  const bubbles = Array.from({ length: 5 }, (_, i) => ({
+  const bubbles = Array.from({ length: 15 }, (_, i) => ({
     id: i,
-    size: Math.random() * 50 + 20,
+    size: Math.random() * 30 + 20,
     left: Math.random() * 100,
     delay: Math.random() * 20,
-    duration: Math.random() * 10 + 15,
+    duration: Math.random() * 5 + 15,
     opacity: Math.random() * 0.5 + 0.2,
   }));
 
@@ -21,7 +21,7 @@ export const BubbleBackground = () => {
           key={bubble.id}
           className="absolute rounded-full bg-white shadow-lg"
           style={{
-            filter: `blur(${Math.random() * 40 + 10}px)`,
+            filter: `blur(${Math.random() * 60 + 20}px)`,
             width: `${bubble.size}px`,
             height: `${bubble.size}px`,
             left: `${bubble.left}%`,
